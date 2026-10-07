@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Belmonte POS — Install</title>
+<style>
+  :root {
+    --accent: rgb(192, 28, 28);
+    --ink: #1f1e1d;
+    --muted: #6b6a68;
+    --line: #e3e1d9;
+    --bg: #f5f4ef;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 20px 64px;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 660px; margin: 0 auto; }
+  .brand {
+    display: inline-block;
+    background: var(--ink);
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 15px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    margin-bottom: 28px;
+  }
+  h1 { font-size: 30px; margin: 0 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 32px; }
+  .download {
+    display: block;
+    background: var(--accent);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 700;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  .meta {
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    margin: 12px 0 36px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+  }
+  h2 { font-size: 19px; margin: 0 0 16px; }
+  ol { margin: 0; padding-left: 22px; }
+  li { margin-bottom: 14px; }
+  li:last-child { margin-bottom: 0; }
+  code {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 2px 7px;
+    font-size: 15px;
+  }
+  .note {
+    border-left: 4px solid var(--accent);
+    background: #f7eceb;
+    padding: 18px 22px;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 20px;
+  }
+  .note strong { display: block; margin-bottom: 6px; }
+  .hash {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px;
+    color: var(--muted);
+    word-break: break-all;
+  }
+  footer { color: var(--muted); font-size: 14px; text-align: center; margin-top: 36px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">BELMONTE POS</div>
+
+  <h1>Install on the till</h1>
+  <p class="sub">For SUNMI T2 counter terminals. Takes about two minutes.</p>
+
+  <!-- Replace href with the GitHub Release asset URL once uploaded -->
+  <a class="download" href="REPLACE_WITH_APK_URL" download>Download the app</a>
+  <p class="meta">Version TEST_BUILD · 23 MB · Android 7.0 or newer</p>
+
+  <div class="note">
+    <strong>This is a test build</strong>
+    It runs on sample products and does not connect to the Belmonte system.
+    Sales are not recorded and nothing is printed. It is for checking how the
+    app feels on the terminal, not for serving customers.
+  </div>
+
+  <div class="card">
+    <h2>Installing</h2>
+    <ol>
+      <li>Open this page on the terminal itself and tap <strong>Download the app</strong>.</li>
+      <li>Open the downloaded file. Android will say installing from this source is blocked — tap <strong>Settings</strong> on that message.</li>
+      <li>Turn on <strong>Allow from this source</strong>, then press back.</li>
+      <li>Tap <strong>Install</strong>, then <strong>Open</strong>.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>If the terminal has no browser</h2>
+    <ol>
+      <li>Download the file on a computer and copy it to a USB stick.</li>
+      <li>Plug the stick into the terminal and open the file manager.</li>
+      <li>Tap the <code>.apk</code> file and follow the same steps above.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Signing in</h2>
+    <p style="margin:0">Any username and password are accepted in this test build.
+    Pick a branch, then scan or search for a product.</p>
+  </div>
+
+  <div class="card">
+    <h2>What to look out for</h2>
+    <ol>
+      <li>Does the barcode scanner add items without tapping the screen?</li>
+      <li>Is the text readable while standing at the counter?</li>
+      <li>Are the buttons easy to hit accurately?</li>
+      <li>Does anything feel slow?</li>
+    </ol>
+  </div>
+
+  <p class="hash">SHA-256: 02a39813777a5bdc03c344668d926a6acc17852af55b6bd79a4cacd1005eea00</p>
+
+  <footer>Belmonte POS · internal test build</footer>
+</main>
+</body>
+</html>
