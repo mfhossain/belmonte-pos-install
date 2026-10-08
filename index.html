@@ -46,12 +46,7 @@
     padding: 20px;
     border-radius: 12px;
   }
-  .meta {
-    text-align: center;
-    color: var(--muted);
-    font-size: 14px;
-    margin: 12px 0 36px;
-  }
+  .meta { text-align: center; color: var(--muted); font-size: 14px; margin: 12px 0 36px; }
   .card {
     background: var(--card);
     border: 1px solid var(--line);
@@ -78,6 +73,19 @@
     margin-bottom: 20px;
   }
   .note strong { display: block; margin-bottom: 6px; }
+  .version {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .version:last-child { border-bottom: 0; padding-bottom: 0; }
+  .version .tag { font-weight: 700; }
+  .version .date { color: var(--muted); font-size: 14px; }
+  .version .summary { width: 100%; color: var(--muted); font-size: 15px; margin-top: 2px; }
+  .version a { color: var(--accent); font-weight: 600; text-decoration: none; }
   .hash {
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     font-size: 12px;
@@ -94,15 +102,14 @@
   <h1>Install on the till</h1>
   <p class="sub">For SUNMI T2 counter terminals. Takes about two minutes.</p>
 
-  <!-- Replace href with the GitHub Release asset URL once uploaded -->
-  <a class="download" href="https://github.com/mfhossain/belmonte-pos-install/releases/latest/download/belmonte-pos-test.apk" download>Download the app</a>
-  <p class="meta">Version TEST_BUILD · 23 MB · Android 7.0 or newer</p>
+  <a class="download" href="https://github.com/mfhossain/belmonte-pos-install/releases/latest/download/belmonte-pos-latest.apk" download>Download the app</a>
+  <p class="meta">Version 0.2.1 · 23.0 MB · Android 7.0 or newer</p>
 
   <div class="note">
     <strong>This is a test build</strong>
     It runs on sample products and does not connect to the Belmonte system.
-    Sales are not recorded and nothing is printed. It is for checking how the
-    app feels on the terminal, not for serving customers.
+    Sales are not recorded. It is for checking how the app feels on the
+    terminal, and for testing the built-in printer — not for serving customers.
   </div>
 
   <div class="card">
@@ -125,9 +132,14 @@
   </div>
 
   <div class="card">
-    <h2>Signing in</h2>
-    <p style="margin:0">Any username and password are accepted in this test build.
-    Pick a branch, then scan or search for a product.</p>
+    <h2>Testing the printer</h2>
+    <ol>
+      <li>Sign in with any username and password, then pick a branch.</li>
+      <li>Tap <strong>Test print</strong> at the top right of the sale screen.</li>
+      <li>A report appears either way. Tap <strong>Share report</strong> to send it as text.</li>
+    </ol>
+    <p style="margin:14px 0 0">If nothing prints, the report says what the printer
+    itself reported — send that rather than describing it.</p>
   </div>
 
   <div class="card">
@@ -140,7 +152,29 @@
     </ol>
   </div>
 
-  <p class="hash">SHA-256: 02a39813777a5bdc03c344668d926a6acc17852af55b6bd79a4cacd1005eea00</p>
+  <div class="card">
+    <h2>All versions</h2>
+    <div class="version">
+      <span class="tag">0.2.1</span>
+      <span class="date">2026-10-08 · current</span>
+      <a href="https://github.com/mfhossain/belmonte-pos-install/releases/download/v0.2.1/belmonte-pos-0.2.1.apk" download>Download</a>
+      <span class="summary">Printer test button with a shareable diagnostic report</span>
+    </div>
+    <div class="version">
+      <span class="tag">0.2.0-printer-test</span>
+      <span class="date">2026-10-08</span>
+      <a href="https://github.com/mfhossain/belmonte-pos-install/releases/download/v0.2.0-printer-test/belmonte-pos-test.apk" download>Download</a>
+      <span class="summary">Test build for the SUNMI T2 built-in printer.</span>
+    </div>
+    <div class="version">
+      <span class="tag">0.1.0-test</span>
+      <span class="date">2026-10-07</span>
+      <a href="https://github.com/mfhossain/belmonte-pos-install/releases/download/v0.1.0-test/belmonte-pos-test.apk" download>Download</a>
+      <span class="summary">Test build for SUNMI T2 terminals.</span>
+    </div>
+  </div>
+
+  <p class="hash">Latest SHA-256: 2390479ad0c234a94b14c093a0d5c677f5558e41bbddf8948f7266a56946ebfb</p>
 
   <footer>Belmonte POS · internal test build</footer>
 </main>
